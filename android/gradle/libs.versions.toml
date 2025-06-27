@@ -1,0 +1,7 @@
+[versions]
+kotlin = "1.9.0"
+gson = "2.10.1"
+
+[libraries]
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }

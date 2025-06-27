@@ -1,0 +1,21 @@
+pluginManagement {
+    repositories {
+        google()
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+//pluginManagement {
+//    includeBuild("../node_modules/@react-native/gradle-plugin")
+//}
+//plugins { id("com.facebook.react.settings") }
+//extensions.configure(com.facebook.react.ReactSettingsExtension){ ex -> ex.autolinkLibrariesFromCommand() }
+rootProject.name = 'SipProject'
+include ':app'
+
+include(":telnyx_common", ":telnyx_rtc")
+project(":app").projectDir = file("app")
+project(":telnyx_common").projectDir = file("telnyx_common")
+project(":telnyx_rtc").projectDir    = file("telnyx_rtc")
+
+includeBuild('../node_modules/@react-native/gradle-plugin')
